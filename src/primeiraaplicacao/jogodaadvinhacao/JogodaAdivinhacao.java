@@ -20,8 +20,36 @@ Utilize a instrução break; para interromper o loop.*/
 
         Scanner scan = new Scanner(System.in);
         int numeroAleatorio = new Random().nextInt(10);
+        int numeroDeTentativas = 3;
 
-        System.out.println("Estou pensando em um número entre 0 e 10.\nEm qual número estou pensando?\nDigite seu palpite.");
+        System.out.printf("Numero aleatorio: %d\n", numeroAleatorio);
+
+        System.out.println("Estou pensando em um número entre 0 e 10.\nEm qual número estou pensando?");
+        System.out.println("Digite seu palpite.");
         int palpiteDoUsuario = scan.nextInt();
+
+        while (numeroDeTentativas > 0) {
+            numeroDeTentativas --;
+
+            if (palpiteDoUsuario != numeroAleatorio && numeroDeTentativas == 0) {
+                System.out.println("Suas tentativas acabaram.\nInsira mais créditos para continuar jogando.");
+
+            }else if (palpiteDoUsuario > numeroAleatorio) {
+//                numeroDeTentativas--;
+                System.out.println("\nO seu palpite é maior que o número que eu estou pensando.\nDigite seu palpite.");
+                System.out.println("Numero de tentativas: " + numeroDeTentativas);
+                palpiteDoUsuario = scan.nextInt();
+
+            } else if (palpiteDoUsuario < numeroAleatorio) {
+//                numeroDeTentativas--;
+                System.out.println("\nO seu palpite é menor que o número que eu estou pensando.\nDigite seu palpite.");
+                System.out.println("Numero de tentativas: " + numeroDeTentativas);
+                palpiteDoUsuario = scan.nextInt();
+
+            } else {
+                System.out.printf("Parabéns!!O número que eu estava pensando era o %d ", palpiteDoUsuario);
+                break;
+            }
+        }
     }
 }
