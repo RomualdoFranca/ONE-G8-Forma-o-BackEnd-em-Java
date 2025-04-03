@@ -33,15 +33,14 @@ Utilize a instrução break; para interromper o loop.*/
 
             if (palpiteDoUsuario != numeroAleatorio && numeroDeTentativas == 0) {
                 System.out.println("Suas tentativas acabaram.\nInsira mais créditos para continuar jogando.");
+                break;
 
             }else if (palpiteDoUsuario > numeroAleatorio) {
-//                numeroDeTentativas--;
                 System.out.println("\nO seu palpite é maior que o número que eu estou pensando.\nDigite seu palpite.");
                 System.out.println("Numero de tentativas: " + numeroDeTentativas);
                 palpiteDoUsuario = scan.nextInt();
 
             } else if (palpiteDoUsuario < numeroAleatorio) {
-//                numeroDeTentativas--;
                 System.out.println("\nO seu palpite é menor que o número que eu estou pensando.\nDigite seu palpite.");
                 System.out.println("Numero de tentativas: " + numeroDeTentativas);
                 palpiteDoUsuario = scan.nextInt();
