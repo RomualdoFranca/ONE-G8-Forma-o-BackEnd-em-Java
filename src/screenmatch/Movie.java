@@ -6,8 +6,30 @@ public class Movie {
     int realiseYear;
     boolean isIncludedInPlan;
     double movieRating;
-    int averageMovieRating;
+    double ratingCount;
     int runTimeMinutes;
 
+    void displayMovieDetails() {
+        String movieDetails = """
+                Movie Details
+                Title: %s
+                Realise year: %d
+                Movie rating: %.1f
+                Average movie rating: %.1f
+                Is included in plan: %s
+                Run time minutes: %d
+                """.formatted(movieName, realiseYear,  movieRating, calculateAverage(), isIncludedInPlan ,runTimeMinutes);
+        System.out.println(movieDetails);
+    }
+
+    void calculateTotalRating(double rating) {
+        movieRating += rating;
+        ratingCount++;
+    }
+
+    double calculateAverage() {
+        double average = movieRating / ratingCount;
+        return average;
+    }
 
 }
