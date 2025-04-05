@@ -16,7 +16,6 @@ public class ContaBancaria {
         System.out.println("Digite o saldo inicial:");
         double saldoInicial = scanner.nextDouble();
 
-
         String dadosIniciais = """
                 ************************************************
                 Dados inicias do cliente:
@@ -43,7 +42,7 @@ public class ContaBancaria {
         int numeroDaOperacaoEscolhida = scanner.nextInt();
 
         while (numeroDaOperacaoEscolhida != 4) {
-            double saldoFinal;
+
 
             switch (numeroDaOperacaoEscolhida) {
                 case 1:
@@ -54,12 +53,15 @@ public class ContaBancaria {
                 case 2:
                     System.out.println("Informe o valor do depósito:");
                     double deposito = scanner.nextDouble();
-                    saldoFinal = deposito + saldoInicial;
-                    System.out.printf("Valor do depósito: R$%.2f\nSaldo após depósito R$%.2f\n",deposito, saldoFinal);
+                    saldoInicial += deposito;
+                    System.out.printf("Valor do depósito: R$%.2f\nSaldo após depósito R$%.2f\n",deposito, saldoInicial);
                     System.out.println(operacoes);
                     numeroDaOperacaoEscolhida = scanner.nextInt();
                     break;
-                    
+                case 3:
+                    System.out.println("Informe o valor da transferência:");
+
+
             }
 
         }
