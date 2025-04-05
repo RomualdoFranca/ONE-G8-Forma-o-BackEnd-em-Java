@@ -39,11 +39,28 @@ public class ContaBancaria {
                 """;
 
         System.out.println(operacoes);
+
+        int[] numerosValidoss = {1, 2, 3, 4};
+        boolean opcaoValida = false;
         int numeroDaOperacaoEscolhida = scanner.nextInt();
 
+
+        for (int numero : numerosValidoss) {
+
+            if (numero == numeroDaOperacaoEscolhida) {
+                System.out.println("Opção válida");
+                opcaoValida = true;
+                break;
+
+            } else {
+                System.out.println("Opção inválida");
+                break;
+
+            }
+        }
+        System.out.println("Valor da opção válida: " + opcaoValida);
+
         while (numeroDaOperacaoEscolhida != 4) {
-
-
 
             switch (numeroDaOperacaoEscolhida) {
                 case 1:
