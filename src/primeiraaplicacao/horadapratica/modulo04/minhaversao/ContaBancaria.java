@@ -37,7 +37,6 @@ public class ContaBancaria {
                 4 - Sair
                 Digite a opção desejada:
                 """;
-
         System.out.println(operacoes);
         int numeroDaOperacaoEscolhida = scanner.nextInt();
 
