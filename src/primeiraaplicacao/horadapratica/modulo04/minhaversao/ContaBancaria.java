@@ -48,47 +48,44 @@ public class ContaBancaria {
         for (int numero : numerosValidoss) {
 
             if (numero == numeroDaOperacaoEscolhida) {
-                System.out.println("Opção válida");
-                opcaoValida = true;
+
+                while (numeroDaOperacaoEscolhida != 4) {
+
+                    switch (numeroDaOperacaoEscolhida) {
+                        case 1:
+                            System.out.printf("Seu saldo atual: R$%.2f\n", saldoInicial);
+                            System.out.println(operacoes);
+                            numeroDaOperacaoEscolhida = scanner.nextInt();
+                            break;
+                        case 2:
+                            System.out.println("Informe o valor do depósito:");
+                            double deposito = scanner.nextDouble();
+                            saldoInicial += deposito;
+                            System.out.printf("Valor do depósito: R$%.2f\nSaldo após depósito R$%.2f\n",deposito, saldoInicial);
+                            System.out.println(operacoes);
+                            numeroDaOperacaoEscolhida = scanner.nextInt();
+                            break;
+                        case 3:
+                            System.out.println("Informe o valor da transferência:");
+                            double transferencia = scanner.nextDouble();
+                            saldoInicial -= transferencia;
+                            System.out.printf("Valor da transferência: R$%.2f\nSaldo após a transferêcia: R$%.2f\n", transferencia, saldoInicial);
+                            System.out.println(operacoes);
+                            numeroDaOperacaoEscolhida = scanner.nextInt();
+                            break;
+                    }
+
+                }
                 break;
 
             } else {
                 System.out.println("Opção inválida");
-                break;
+                System.out.println(operacoes);
+                numeroDaOperacaoEscolhida = scanner.nextInt();
 
             }
         }
-        System.out.println("Valor da opção válida: " + opcaoValida);
-
-        while (numeroDaOperacaoEscolhida != 4) {
-
-            switch (numeroDaOperacaoEscolhida) {
-                case 1:
-                    System.out.printf("Seu saldo atual: R$%.2f\n", saldoInicial);
-                    System.out.println(operacoes);
-                    numeroDaOperacaoEscolhida = scanner.nextInt();
-                    break;
-                case 2:
-                    System.out.println("Informe o valor do depósito:");
-                    double deposito = scanner.nextDouble();
-                    saldoInicial += deposito;
-                    System.out.printf("Valor do depósito: R$%.2f\nSaldo após depósito R$%.2f\n",deposito, saldoInicial);
-                    System.out.println(operacoes);
-                    numeroDaOperacaoEscolhida = scanner.nextInt();
-                    break;
-                case 3:
-                    System.out.println("Informe o valor da transferência:");
-                    double transferencia = scanner.nextDouble();
-                    saldoInicial -= transferencia;
-                    System.out.printf("Valor da transferência: R$%.2f\nSaldo após a transferêcia: R$%.2f\n", transferencia, saldoInicial);
-                    System.out.println(operacoes);
-                    numeroDaOperacaoEscolhida = scanner.nextInt();
-                    break;
 
 
-
-            }
-
-        }
     }
 }
