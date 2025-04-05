@@ -44,6 +44,7 @@ public class ContaBancaria {
         while (numeroDaOperacaoEscolhida != 4) {
 
 
+
             switch (numeroDaOperacaoEscolhida) {
                 case 1:
                     System.out.printf("Seu saldo atual: R$%.2f\n", saldoInicial);
@@ -60,6 +61,13 @@ public class ContaBancaria {
                     break;
                 case 3:
                     System.out.println("Informe o valor da transferência:");
+                    double transferencia = scanner.nextDouble();
+                    saldoInicial -= transferencia;
+                    System.out.printf("Valor da transferência: R$%.2f\nSaldo após a transferêcia: R$%.2f\n", transferencia, saldoInicial);
+                    System.out.println(operacoes);
+                    numeroDaOperacaoEscolhida = scanner.nextInt();
+                    break;
+
 
 
             }
