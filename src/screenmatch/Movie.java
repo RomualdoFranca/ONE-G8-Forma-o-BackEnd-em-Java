@@ -28,8 +28,8 @@ public class Movie {
     }
 
     double calculateAverage() {
-        double average = movieRating / ratingCount;
-        return average;
+
+        return movieRating / ratingCount;
     }
 
 }
