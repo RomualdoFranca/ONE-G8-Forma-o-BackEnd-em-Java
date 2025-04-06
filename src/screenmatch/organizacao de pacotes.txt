@@ -1,0 +1,5 @@
+As classes devem ser organizadas de acordo com as funcionalidades em comum
+
+Como nomear pacotes
+
+br.com.alura.screenmatch.modelo
