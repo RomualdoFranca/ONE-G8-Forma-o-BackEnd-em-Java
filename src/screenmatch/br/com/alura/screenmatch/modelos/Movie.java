@@ -45,14 +45,6 @@ public class Movie {
         isIncludedInPlan = includedInPlan;
     }
 
-    public void setMovieRating(double movieRating) {
-        this.movieRating = movieRating;
-    }
-
-    public void setRatingCount(double ratingCount) {
-        this.ratingCount = ratingCount;
-    }
-
     public void setRunTimeMinutes(int runTimeMinutes) {
         this.runTimeMinutes = runTimeMinutes;
     }
