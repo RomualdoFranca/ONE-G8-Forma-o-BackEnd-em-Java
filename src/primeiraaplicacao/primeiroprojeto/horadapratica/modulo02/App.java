@@ -13,6 +13,12 @@ public class App {
         double valorSemDesconto = produto1.getPreco();
         produto1.aplicaDesconto();
         double valorComDesconto = produto1.getPreco();
-        System.out.printf("Valor sem desconto: %.2f\nValor com desconto %.2f", valorSemDesconto, valorComDesconto);
+        System.out.printf("Valor sem desconto: %.2f\nValor com desconto %.2f\n", valorSemDesconto, valorComDesconto);
+
+        Aluno aluno1 = new Aluno();
+        aluno1.setNome("Lua");
+//        aluno1.insereNotas(5.5);
+//        double notaTrabalho = aluno1.getNotas();
+        aluno1.calcularmedia();
     }
 }
