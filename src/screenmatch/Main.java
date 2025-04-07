@@ -1,6 +1,7 @@
 package screenmatch;
 
 import screenmatch.br.com.alura.screenmatch.modelos.Movie;
+import screenmatch.br.com.alura.screenmatch.modelos.Series;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +17,15 @@ public class Main {
         filme1.calculateAverage();
 
         filme1.displayMovieDetails();
+
+        Series serie1 = new Series();
+        serie1.setMovieName("Arcane");
+        serie1.setRealiseYear(2023);
+        serie1.setSeasonCount(2);
+        serie1.setEpisodesPerSeason(10);
+        serie1.setEpisodeDurationMinutes(45);
+        serie1.displayMovieDetails();
+        System.out.println("Season duration in minutes: " + serie1.getRunTimeMinutes());
 
     }
 }

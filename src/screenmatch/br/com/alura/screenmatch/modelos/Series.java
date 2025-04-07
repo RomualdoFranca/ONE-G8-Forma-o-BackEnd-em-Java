@@ -1,6 +1,6 @@
 package screenmatch.br.com.alura.screenmatch.modelos;
 
-public class Series {
+public class Series extends Title{
     private int seasonCount;
     private boolean isAvailableOnStream;
     private int episodesPerSeason;
@@ -36,5 +36,10 @@ public class Series {
 
     public void setEpisodeDurationMinutes(int episodeDurationMinutes) {
         this.episodeDurationMinutes = episodeDurationMinutes;
+    }
+
+    @Override
+    public int getRunTimeMinutes() {
+        return seasonCount * episodesPerSeason * episodeDurationMinutes;
     }
 }

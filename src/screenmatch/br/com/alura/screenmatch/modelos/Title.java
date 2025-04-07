@@ -7,7 +7,7 @@ public class Title {
     private  boolean isIncludedInPlan;
     private double movieRating;
     private double ratingCount;
-    int runTimeMinutes;
+    private int runTimeMinutes;
 
     public String getMovieName() {
 
