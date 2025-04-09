@@ -11,14 +11,17 @@ public class Series extends Title{
     }
 
     public void setSeasonCount(int seasonCount) {
+
         this.seasonCount = seasonCount;
     }
 
     public boolean isAvailableOnStream() {
+
         return isAvailableOnStream;
     }
 
     public void setAvailableOnStream(boolean availableOnStream) {
+
         isAvailableOnStream = availableOnStream;
     }
 
@@ -27,10 +30,12 @@ public class Series extends Title{
     }
 
     public void setEpisodesPerSeason(int episodesPerSeason) {
+
         this.episodesPerSeason = episodesPerSeason;
     }
 
     public int getEpisodeDurationMinutes() {
+
         return episodeDurationMinutes;
     }
 
