@@ -26,6 +26,7 @@ public class Series extends Title{
     }
 
     public int getEpisodesPerSeason() {
+
         return episodesPerSeason;
     }
 
@@ -45,6 +46,7 @@ public class Series extends Title{
 
     @Override
     public int getRunTimeMinutes() {
+
         return seasonCount * episodesPerSeason * episodeDurationMinutes;
     }
 }
