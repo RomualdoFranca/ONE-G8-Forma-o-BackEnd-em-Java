@@ -15,6 +15,6 @@ public class Movie extends Title implements Classificavel {
 
     @Override
     public int getClassificacao() {
-        return 0;
+        return (int) calculateAverage() / 2;
     }
 }
