@@ -12,19 +12,13 @@ public class TabuadaMultiplicacao implements Tabuada{
     }
 
 
-    public int[] calculaTabuada() {
-        int[] tabuada = new int[10];
-        for (int i = 1; i <= 10; i++) {
-            tabuada[i - 1] = i * numero;
-        }
-        return tabuada;
-    }
     @Override
-    public String mostrarTabuada() {
-        for (int i = 0; i < calculaTabuada().length; i++) {
-            return """
-                    num = %s""".formatted(calculaTabuada());
+    public void mostrarTabuada() {
+        for (int i = 1; i <= 10; i++) {
+            String tabuada = """
+                    %d X %d = %d""".formatted(i, numero, (numero * i));
+            System.out.println(tabuada);
         }
-        return null;
+        System.out.println("");
     }
 }
