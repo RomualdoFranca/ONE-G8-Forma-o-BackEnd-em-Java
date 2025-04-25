@@ -6,6 +6,8 @@ import screenmatch.br.com.alura.screenmatch.modelos.Episodio;
 import screenmatch.br.com.alura.screenmatch.modelos.Movie;
 import screenmatch.br.com.alura.screenmatch.modelos.Series;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -21,6 +23,18 @@ public class Main {
 
         filme1.displayMovieDetails();
 
+        var filmeDoPaulo = new Movie();
+        filmeDoPaulo.setMovieName("Dogville");
+        filmeDoPaulo.setRealiseYear(2003);
+        filmeDoPaulo.setRunTimeMinutes(200);
+        filmeDoPaulo.calculateTotalRating(10);
+
+        ArrayList<Movie> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filme1);
+        listaDeFilmes.add(filmeDoPaulo);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Filmes: " + listaDeFilmes.get(0).getMovieName());
+
         Series serie1 = new Series();
         serie1.setMovieName("Arcane");
         serie1.setRealiseYear(2023);
@@ -29,6 +43,8 @@ public class Main {
         serie1.setEpisodeDurationMinutes(45);
         serie1.displayMovieDetails();
         System.out.println("Season duration in minutes: " + serie1.getRunTimeMinutes());
+
+
 
         CalculadoraDeTempo calc = new CalculadoraDeTempo();
         calc.inclui(filme1);
