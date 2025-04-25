@@ -11,8 +11,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        Movie filme1 = new Movie();
-        filme1.setMovieName("First Blood");
+        Movie filme1 = new Movie("First Blood");
         filme1.setRealiseYear(1982);
         filme1.setRunTimeMinutes(193);
         filme1.setIncludedInPlan(true);
@@ -23,9 +22,8 @@ public class Main {
 
         filme1.displayMovieDetails();
 
-        var filmeDoPaulo = new Movie();
-        filmeDoPaulo.setMovieName("Dogville");
-        filmeDoPaulo.setRealiseYear(2003);
+        var filmeDoPaulo = new Movie("Dogville");
+         filmeDoPaulo.setRealiseYear(2003);
         filmeDoPaulo.setRunTimeMinutes(200);
         filmeDoPaulo.calculateTotalRating(10);
 
@@ -37,7 +35,7 @@ public class Main {
         System.out.println(listaDeFilmes);
 
         Series serie1 = new Series();
-        serie1.setMovieName("Arcane");
+//        serie1.setMovieName("Arcane");
         serie1.setRealiseYear(2023);
         serie1.setSeasonCount(2);
         serie1.setEpisodesPerSeason(10);

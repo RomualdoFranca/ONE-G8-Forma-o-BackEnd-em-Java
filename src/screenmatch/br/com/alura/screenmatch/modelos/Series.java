@@ -6,7 +6,9 @@ public class Series extends Title{
     private int episodesPerSeason;
     private int episodeDurationMinutes;
 
+
     public int getSeasonCount() {
+
         return seasonCount;
     }
 

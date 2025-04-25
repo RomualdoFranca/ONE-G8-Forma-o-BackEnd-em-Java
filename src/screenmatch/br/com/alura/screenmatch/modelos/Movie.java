@@ -5,6 +5,9 @@ import screenmatch.br.com.alura.screenmatch.calculos.Classificavel;
 public class Movie extends Title implements Classificavel {
     private boolean isOscarWinner;
 
+    public Movie (String movieName) {
+        this.setMovieName(movieName);
+    }
     public boolean isOscarWinner() {
 
         return isOscarWinner;
@@ -23,6 +26,7 @@ public class Movie extends Title implements Classificavel {
 
     @Override
     public String toString() {
+
         return "Filme: " + this.getMovieName() + "(" + this.getRealiseYear() + ")";
     }
 }

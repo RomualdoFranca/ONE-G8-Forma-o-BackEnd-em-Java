@@ -40,10 +40,6 @@ public class Title {
         return movieRating;
     }
 
-    public void setMovieName(String movieName) {
-
-        this.movieName = movieName;
-    }
 
     public void setRealiseYear(int realiseYear) {
 
