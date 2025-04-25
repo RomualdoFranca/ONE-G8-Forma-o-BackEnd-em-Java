@@ -34,6 +34,7 @@ public class Main {
         listaDeFilmes.add(filmeDoPaulo);
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Filmes: " + listaDeFilmes.get(0).getMovieName());
+        System.out.println(listaDeFilmes);
 
         Series serie1 = new Series();
         serie1.setMovieName("Arcane");
