@@ -6,6 +6,15 @@ public class Series extends Title{
     private int episodesPerSeason;
     private int episodeDurationMinutes;
 
+    public Series(String movieName, int realiseYear) {
+        super(movieName, realiseYear);
+    }
+
+    public Series(String movieName, int realiseYear, int episodesPerSeason, int episodeDurationMinutes) {
+        super(movieName, realiseYear);
+        this.episodesPerSeason = episodesPerSeason;
+        this.episodeDurationMinutes = episodeDurationMinutes;
+    }
 
     public int getSeasonCount() {
 

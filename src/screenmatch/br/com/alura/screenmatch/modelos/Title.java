@@ -9,6 +9,11 @@ public class Title {
     private double ratingCount;
     private int runTimeMinutes;
 
+    public Title(String movieName, int realiseYear) {
+        this.movieName = movieName;
+        this.realiseYear = realiseYear;
+    }
+
     public String getMovieName() {
 
         return movieName;
