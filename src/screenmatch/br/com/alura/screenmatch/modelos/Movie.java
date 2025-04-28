@@ -6,6 +6,7 @@ public class Movie extends Title implements Classificavel {
     private boolean isOscarWinner;
 
     public Movie (String movieName, int realiseYear) {
+
         super(movieName, realiseYear);
     }
     public boolean isOscarWinner() {
