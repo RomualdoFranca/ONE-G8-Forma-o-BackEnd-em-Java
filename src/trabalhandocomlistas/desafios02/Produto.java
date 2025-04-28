@@ -27,8 +27,10 @@ public class Produto {
     public String toString() {
         return """
                 Nome do produto:        %s
-                Preço:              R$%.2f
+                Preço:                  R$ %.2f
                 Quantidade:             %d unidade(s)
-                """;
+                """.formatted(nome, preco, quantidade);
     }
+
+
 }
