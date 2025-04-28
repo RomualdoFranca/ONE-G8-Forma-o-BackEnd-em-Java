@@ -25,5 +25,10 @@ public class Main {
         System.out.println("Tamanho da lista: " + produtos.size());
         // recupera produto pelo indice
         System.out.println("Recupera produto pelo indice: \n" + produtos.get(3).toString());
+
+        // imprime a lista completa de produtos
+        for (Produto produto: produtos) {
+            System.out.println(produto);
+        }
     }
 }
