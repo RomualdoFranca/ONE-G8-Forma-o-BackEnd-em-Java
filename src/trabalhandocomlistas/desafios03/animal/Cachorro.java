@@ -10,4 +10,13 @@ public class Cachorro extends Animal{
         this.raca = raca;
         this.porte = porte;
     }
+
+    @Override
+    public void animalComer() {
+        System.out.println("Cachorro comendo");
+    }
+
+    public void cahorroLatir() {
+        System.out.println("Cachorro latindo");
+    }
 }

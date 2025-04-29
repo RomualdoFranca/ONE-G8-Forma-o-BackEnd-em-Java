@@ -13,14 +13,21 @@ public class Animal {
     }
 
     public String getEspecie() {
+
         return especie;
     }
 
     public String getNome() {
+
         return nome;
     }
 
     public int getidadeAnos() {
+
         return idadeAnos;
+    }
+
+    public void animalComer() {
+        System.out.println("Animal comendo");
     }
 }
