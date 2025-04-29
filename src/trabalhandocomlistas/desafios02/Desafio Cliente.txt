@@ -1,0 +1,35 @@
+Crie uma classe Cliente com os atributos nome, cpf e email.
+
+Implemente um construtor que aceite parâmetros para inicializar esses atributos.
+
+Crie uma lista de objetos Cliente utilizando a classe ArrayList.
+
+Adicione alguns clientes à lista e imprima o tamanho da lista.
+
+Implemente o método toString() na classe Cliente para retornar uma representação em texto do objeto.
+
+Imprima a lista de clientes utilizando o método System.out.println().
+
+Crie uma classe CarrinhoDeCompras que tenha uma lista de produtos (use a classe Produto que você criou anteriormente).
+Implemente métodos para adicionar e remover produtos do carrinho.
+Crie um método que calcule o valor total dos produtos no carrinho.
+Implemente um método toString() que imprima todos os produtos no carrinho e o valor total.
+Teste a classe CarrinhoDeCompras criando alguns produtos e adicionando-os ao carrinho.
+
+
+Desafio 3: Classe Funcionario
+Crie uma classe Funcionario com os atributos nome, salario e cargo.
+Implemente um construtor que aceite parâmetros para inicializar esses atributos.
+Crie uma lista de objetos Funcionario utilizando a classe ArrayList.
+Adicione alguns funcionários à lista e imprima o tamanho da lista.
+Implemente o método toString() na classe Funcionario para retornar uma representação em texto do objeto.
+Imprima a lista de funcionários utilizando o método System.out.println().
+
+
+Desafio 4: Classe Livro
+Crie uma classe Livro com os atributos titulo, autor e anoPublicacao.
+Implemente um construtor que aceite parâmetros para inicializar esses atributos.
+Crie uma lista de objetos Livro utilizando a classe ArrayList.
+Adicione alguns livros à lista e imprima o tamanho da lista.
+Implemente o método toString() na classe Livro para retornar uma representação em texto do objeto.
+Imprima a lista de livros utilizando o método System.out.println().
