@@ -16,14 +16,20 @@ public class Main {
         //Métodos sobrescritos (@Override) ainda usam a implementação de Cachorro (polimorfismo).
 
 
-        Animal animal = cachorro01; //Upcasting implícito
-        // devido ao casting o método chamado é da subclasse  Cachorro ocorrendo o Polimorfismo
+        Animal animal =  cachorro01; //Upcasting implícito
+        // devido ao casting o método chamado é o que estar sobrecristo na subclasse  Cachorro. Ocorre o Polimorfismo
         animal.animalComer();
+
 
         Animal animal1 = new Animal("Felino", "Gato", 12);
         // sem casting o método chamado é da superclasse Animal
         animal1.animalComer();
 
+        if (animal instanceof Cachorro) {
+            System.out.println("Verificando usando o 'instanceof' para evitar erro");
+            // aqui, devido ao casting, o animal agora é um Cachorro. Por isso é possível chamar o método da subclasse
+            ((Cachorro) animal).cahorroLatir();
+        }
 
     }
 }
