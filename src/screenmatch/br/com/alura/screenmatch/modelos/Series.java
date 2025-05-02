@@ -7,6 +7,7 @@ public class Series extends Title{
     private int episodeDurationMinutes;
 
     public Series(String movieName, int realiseYear) {
+
         super(movieName, realiseYear);
     }
 

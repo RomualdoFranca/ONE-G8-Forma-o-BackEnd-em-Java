@@ -5,6 +5,7 @@ import screenmatch.br.com.alura.screenmatch.modelos.Series;
 import screenmatch.br.com.alura.screenmatch.modelos.Title;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -40,5 +41,18 @@ public class PrincipalComListas {
         //imprime usando Method Reference
         System.out.println("Method Reference");
         lista.forEach(System.out::println);
+
+        ArrayList<String> buscarPorArtistas = new ArrayList<>();
+        buscarPorArtistas.add("Adam Sandler");
+        buscarPorArtistas.add("Paulo");
+        buscarPorArtistas.add("Jaqueline");
+        System.out.println(buscarPorArtistas);
+
+        System.out.println("Ordena em ordem alfabética");
+        Collections.sort(buscarPorArtistas);
+        System.out.println(buscarPorArtistas);
+
+        Collections.sort(lista);
+        System.out.println(lista);
     }
 }

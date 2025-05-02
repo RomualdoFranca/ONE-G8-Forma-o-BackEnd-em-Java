@@ -1,6 +1,8 @@
 package screenmatch.br.com.alura.screenmatch.modelos;
 
-public class Title {
+import java.util.Collection;
+
+public class Title implements Comparable<Title> {
 
     private  String movieName;
     private int realiseYear;
@@ -84,4 +86,9 @@ public class Title {
         return movieRating / ratingCount;
     }
 
+
+    @Override
+    public int compareTo(Title outroTitulo) {
+        return this.getMovieName().compareTo(outroTitulo.getMovieName());
+    }
 }
