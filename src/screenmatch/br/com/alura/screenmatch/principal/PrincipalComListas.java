@@ -6,6 +6,8 @@ import screenmatch.br.com.alura.screenmatch.modelos.Title;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -17,7 +19,7 @@ public class PrincipalComListas {
         series01.calculateTotalRating(9);
 
       // a lista foi parametrizada com Title para suportar tanto Movie quando Serie
-        ArrayList<Title> lista = new ArrayList<>();
+        List<Title> lista = new ArrayList<>();
         lista.add(movie01);
         lista.add(movie02);
         lista.add(series01);
@@ -53,6 +55,10 @@ public class PrincipalComListas {
         System.out.println(buscarPorArtistas);
 
         Collections.sort(lista);
+        System.out.println(lista);
+
+        lista.sort(Comparator.comparing(Title::getRealiseYear));
+        System.out.println("Ordenando por ano");
         System.out.println(lista);
     }
 }

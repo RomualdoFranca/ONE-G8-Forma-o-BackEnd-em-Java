@@ -61,4 +61,11 @@ public class Series extends Title{
 
         return seasonCount * episodesPerSeason * episodeDurationMinutes;
     }
+
+    @Override
+    public String toString() {
+        return """
+                Série: %s (%d)
+                """.formatted(this.getMovieName(), this.getRealiseYear());
+    }
 }
