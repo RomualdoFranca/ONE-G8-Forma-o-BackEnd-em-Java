@@ -18,7 +18,7 @@ public class PrincipalComListas {
         Series series01 = new Series("The Last of Us", 2023, 10, 50);
         series01.calculateTotalRating(9);
 
-      // a lista foi parametrizada com Title para suportar tanto Movie quando Serie
+        // a lista foi parametrizada com Title para suportar tanto Movie quando Serie
         List<Title> lista = new ArrayList<>();
         lista.add(movie01);
         lista.add(movie02);
