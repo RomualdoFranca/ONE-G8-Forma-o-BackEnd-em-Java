@@ -19,7 +19,7 @@ public class ListaNumerosInteiros {
 
         System.out.println("Lista com elementos na ordem que foram inseridos");
         System.out.println(listaInteiros);
-        
+
         // usa o método Collection.sort para ordenar
         Collections.sort(listaInteiros);
         System.out.println("Lista ordenada");
