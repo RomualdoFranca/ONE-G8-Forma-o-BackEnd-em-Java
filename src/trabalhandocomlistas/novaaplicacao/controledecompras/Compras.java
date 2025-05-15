@@ -26,31 +26,14 @@ public class Compras {
 
     Scanner scanner = new Scanner(System.in);
 
-
-    public void defineLimiteCartao() {
-        System.out.println("Digite o limite do cartão de crédito.");
-        this.limiteCartao = scanner.nextDouble();
-
-    }
-
-    public void descreveCompra() {
-        System.out.println("Digite a descrição da compra:");
-        this.nomeItem = scanner.nextLine();
-        insereValorCompra();
-    }
-
-    public void insereValorCompra() {
-        System.out.println("Digite o valor da compra:");
-        this.preco = scanner.nextDouble();
-        System.out.println("Compra realizada!");
-    }
     public void menuLancamentoCompras() {
         int opcao;
-        do {
 
-            System.out.println("Digite o limite do cartão de crédito.");
-            this.limiteCartao = scanner.nextDouble();
-            scanner.nextLine();
+        System.out.println("Digite o limite do cartão de crédito.");
+        this.limiteCartao = scanner.nextDouble();
+        scanner.nextLine();
+        
+        do {
 
             System.out.println("Digite a descrição da compra:");
             this.nomeItem = scanner.nextLine();
@@ -58,9 +41,9 @@ public class Compras {
             System.out.println("Digite o valor da compra:");
             this.preco = scanner.nextDouble();
 
-
-
             System.out.println("Compra realizada!");
+            String msg = toString();
+            System.out.println(msg);
 
             System.out.println("Digite 0 para sair ou 1 para continuar");
             opcao = scanner.nextInt();
@@ -68,6 +51,16 @@ public class Compras {
         } while (opcao != 0);
 
         System.out.println("Saindo da aplicação");
+        toString();
 
+    }
+
+
+    public String toString() {
+        return """
+                Limite do cartão: R$%.2f
+                Descrição do produto: %s
+                Valor do produto: %.2f
+                """.formatted(getLimiteCartao(), getNomeItem(), getPreco());
     }
 }
