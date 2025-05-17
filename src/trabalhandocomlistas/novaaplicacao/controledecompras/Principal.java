@@ -1,8 +1,14 @@
 package trabalhandocomlistas.novaaplicacao.controledecompras;
 
+import java.util.Scanner;
+
 public class Principal {
     public static void main(String[] args) {
-        Compras compras01 = new Compras();
-        compras01.menuLancamentoCompras();
+        Compras compras = new Compras();
+        compras.realizaCompra();
+
+
+
+
     }
 }
