@@ -14,14 +14,17 @@ public class Compras {
 //    }
 
     public String getNomeItem() {
+
         return nomeItem;
     }
 
     public double getPreco() {
+
         return preco;
     }
 
     public double getLimiteCartao() {
+
         return limiteCartao;
     }
 

@@ -1,0 +1,28 @@
+
+* Criar um aplicação para lançamento de compras com cartão de crédito
+* Menu para lançamento de compras
+* Exibição da lista de compras realizadas e ordenadas por valor
+
+Apresentar no extrato as informações na ordem crescentes dos valores
+
+Informações do extrato da compra
+
+COMPRAS REALIZADAS:
+
+********************
+nome do item - valor
+
+
+********************
+
+Saldo do cartão: R$
+
+CLASSES
+Extrato: apresenta as informações das compras (valor, nome do intem)
+ListaCompras: armazena os intens das compras, ordena os dados
+Principal: classe que roda a aplicação
+
+Não precisa criar objetos do tipo compra
+Implementar uma estrutura de repetição para receber os inputs com os dados das compras
+Os dados dos inputs devem ser adicionados a lista
+Ao encerrar as compras, os itens devem ser exibidos ordenados por valor, do menor para o maior valor.
