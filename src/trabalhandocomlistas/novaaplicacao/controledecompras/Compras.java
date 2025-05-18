@@ -44,7 +44,7 @@ public class Compras {
     public void realizaCompra() {
         int opcaoContinuaFinaliza = 1;
 
-        defineLimite();
+//        defineLimite();
 
         //loop para realizar compras
         while (opcaoContinuaFinaliza == 1) {
@@ -55,6 +55,7 @@ public class Compras {
             this.preco = scanner.nextDouble();
             scanner.nextLine();
             adicionaCompras();
+
 
             System.out.println("Compra realizada.");
             System.out.println("Para continuar, digite 1. Para sair, digite 0.");
@@ -82,6 +83,40 @@ public class Compras {
         System.out.println("Digite o limite do cartão:");
         this.limiteCartao = scanner.nextDouble();
         scanner.nextLine();
+        System.out.println("Limite inicial:" + this.limiteCartao);
+//        return this.limiteCartao;
+    }
+
+    public void descontaValor(){
+        defineLimite();// limite inicial
+        double limiteTemporario = getLimiteCartao();
+
+
+        double somaTotalCompras = 0;
+        while (this.limiteCartao >= 0) {
+            System.out.println("Digite o valor da compra:");
+            this.preco = scanner.nextDouble();
+            scanner.nextLine();
+            somaTotalCompras += getPreco();
+            System.out.println("Soma total " + somaTotalCompras);
+            limiteTemporario -= getPreco();
+
+            if (limiteTemporario <= 0) {
+                System.out.println("Compra realizada!");
+                this.limiteCartao = limiteTemporario;
+                System.out.println("Limite final:" + getLimiteCartao());
+            }else {
+                this.limiteCartao -= limiteTemporario;
+                System.out.println("Limite final:" + getLimiteCartao());
+            }
+
+            System.out.println("Limite após a compra (temporario): " + limiteTemporario);
+            System.out.println("Limite inicial:" + getLimiteCartao());
+
+        }
+
+        System.out.println("Compra não realizada. Limite insuficiente");
+
     }
     @Override
     public String toString() {
