@@ -1,0 +1,51 @@
+
+
+1° Criar as classes Cartão e Compras
+
+*****************  CLASSE CartãoDeCredito  **************************
+
+* Atributos
+    private double limite
+    private double saldo
+    List<Compra> compras (lista de compras associada para controlar o limite do saldo baseada nas compras realizadas)
+
+
+CONSTRUTOR
+Ao criar o objeto do tipo cartão, já deve ser definido limite do cartão.
+O limite deve ser definido no construtor
+Obs: Inicialmente ao criar um objeto desse tipo, tanto o limite quanto o saldo serão iguais.Pois ainda não foi realizada
+nenhuma compra e por conseguinte, o saldo não foi alterado
+
+A List<> também será inicializada pelo construtor
+
+GETTERS E SETTERS
+Não permitir a mudança do saldo e do limite utilizando os setters.
+Criar apenas os getters
+
+
+*Métodos
+
+Lançamento de compras num método boooleano.
+Porque um método booleano? Porque as compras só serão lançadas caso haja saldo suficiente.
+Se houver saldo, o retorno do método será 'true'
+
+O método terá como parâmetro um objeto do tipo compra (Compra compra)
+Dentro do método, verificar se o saldo é suficiente para realizar a compra
+Eu tenho limite para realizar essa compra?
+
+
+*************   Classe Compras  ******************************
+
+Atributos
+    descricao
+    valor
+
+Construtor:
+com ambos atributos
+Obs: os valores são poderão ser setados através do construtor
+
+Criação dos getters
+
+Sobrescrita do toString()
+
+* Vincular compra ao cartão de crédito, ou seja, adicionar a compra na lista da classe do cartão através de um método
