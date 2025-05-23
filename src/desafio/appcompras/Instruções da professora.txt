@@ -25,27 +25,71 @@ Criar apenas os getters
 
 *Métodos
 
+- Vincular compra ao cartão de crédito, ou seja, adicionar a compra na lista da classe do cartão através de um método
 Lançamento de compras num método boooleano.
+
 Porque um método booleano? Porque as compras só serão lançadas caso haja saldo suficiente.
 Se houver saldo, o retorno do método será 'true'
 
 O método terá como parâmetro um objeto do tipo compra (Compra compra)
 Dentro do método, verificar se o saldo é suficiente para realizar a compra
 Eu tenho limite para realizar essa compra?
+Se o saldo for suficiente:
+    adiciona a compra na lista
+    e subtrai o valor do compra do saldo
+    retorna true
+
+Se o limite não for suficiente:
+    retorna false
 
 
 *************   Classe Compras  ******************************
-
+Essa classe tem implementar a interface Comparable para poder realizar ordenações das compras realizadas
 Atributos
     descricao
     valor
 
 Construtor:
 com ambos atributos
-Obs: os valores são poderão ser setados através do construtor
+Obs: os valores só poderão ser setados através do construtor
 
 Criação dos getters
 
 Sobrescrita do toString()
 
-* Vincular compra ao cartão de crédito, ou seja, adicionar a compra na lista da classe do cartão através de um método
+Sobrescrita do compareTo(Compra outraCompra)
+    Não é possível realizar a comparação diretamente utilizando o valor double da compra, pois é um valor do tipo
+    primitivo
+
+************* Classe principal *****************
+
+-Scanner para leitura
+-Output com pegunta do limite do cartão
+-cria uma variavel para armazenar o input do limite do cartao
+-Instaciação de um objeto do tipo cartão
+-O limite inserido, armazenado na variável, será adicionado na instaciação do objeto, no parametro do construtor
+-variável com o numero da opção do menu para sair da aplicação
+-Uma estrutura de repetição para realizar a entrada dos pedidos das compras
+    Input com o valor e a descrição das compras
+    Implementar variaveis de escopo para armazenar os inputs
+
+    Dentro da estrutura de repetição, instanciar um objeto do tipo compra
+        o construtor do objeto compra tem dois parametros (descricao, valor) que serão substituidos pelas variaveis de
+        escopo que armazenam os valores dos inputs
+
+    O metodo lancaCompra() tem como parametro um objeto do tipo compra, por isso a necessidade de instanciar um objeto
+    compra dentro da estrutura de repetição
+    implementar uma variavel de escopo booleana para armazenar o valor do metodo lancaCompra()
+
+    implementar um if() para repetir ou sair do menu compra
+        se a variavel de escopo que armazena o valor booleano do metodo lancaCompra() for true
+        menasagem informando que a compra foi realizada
+        mensagem com as opcoes do menu para continuar ou sair da aplicação
+
+        se o retorno do metodo lancaCompra() for false,
+        mensagem informando saldo insuficiente
+        atribuir o valor 0 a variável 'sair' para encerrar a operação
+
+Fora da estrutura de repetição
+Implementar layout da mensagem do extrato
+implementar um for each para apresentar as compras inseridas na lista
